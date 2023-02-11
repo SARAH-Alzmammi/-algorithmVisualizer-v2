@@ -57,13 +57,13 @@ const arraySizeOptions =[5,7,10,15];
             <div className="flex flex-col  gap-5 " >
 
       <div className='flex justify-center items-center w-fit mx-auto'>
-          <div className="flex gap-2   items-end w-11/12  mx-auto "  >
+          <div className="flex gap-1   items-end w-11/12  mx-auto border-b-4 border-purple rounded"  >
               {array.map((value:number, idx:number) => {
                   return (
-                      <div key={idx} className="flex justify-items-end bg-gray  w-8 rounded  text-white arrayElement transition-all justify-center"   style={{
+                      <div key={idx} className="flex justify-items-end bg-gray  w-6 rounded-t  text-white arrayElement transition-all justify-center"   style={{
                           height: `${value+50}px`,
                       }}>
-                          <span className="text-center">     {value}</span>
+                          <span className="text-center text-xs">     {value}</span>
                       </div>
                   )
               })}
