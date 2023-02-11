@@ -8,7 +8,7 @@ interface SortView{
 }
 
 export default function SortView({name, method}: SortView) {
-    const { array ,size,changeSize,changeSpeed,speed,isProcessing} = useAppStore()
+    const { array ,size,changeSize,changeSpeed,speed,isProcessing,generateNewArray} = useAppStore()
 const speedOptions =['fast','medium','slow'];
 const arraySizeOptions =[5,7,10,15];
     return (
@@ -48,6 +48,14 @@ const arraySizeOptions =[5,7,10,15];
                                 </li>
                             )})
                         }
+                        <li
+                            key={5}
+                            onClick={ e => isProcessing ? e.preventDefault() :generateNewArray()}
+                            className={`px-2 py-1 text-sm  text-white  rounded-lg shadow  cursor-pointer bg-gray  `}
+
+                        >
+                            &#128260;
+                        </li>
                     </ul>
                 </div>
                 <button  className="mt-7 px-2 py-1 text-sm  text-white  rounded-lg shadow  cursor-pointer bg-gray w-fit disabled:opacity-25" onClick={method} disabled={isProcessing}>SORT</button >
