@@ -48,18 +48,15 @@ const arraySizeOptions =[5,7,10,15];
                                 </li>
                             )})
                         }
-                        <li
-                            key={5}
-                            onClick={ e => isProcessing ? e.preventDefault() :generateNewArray()}
-                            className={`px-2 py-1 text-sm  text-white  rounded-lg shadow  cursor-pointer bg-gray  `}
-
-                        >
-                            &#128260;
-                        </li>
                     </ul>
                 </div>
                 <button  className="mt-7 px-2 py-1 text-sm  text-white  rounded-lg shadow  cursor-pointer bg-gray w-fit disabled:opacity-25" onClick={method} disabled={isProcessing}>SORT</button >
-
+                <button
+                    onClick={ e => isProcessing ? e.preventDefault() :generateNewArray()}
+                    className=" ml-2 mt-7 px-2 py-1 text-sm  text-white  rounded-lg shadow  cursor-pointer bg-gray w-fit disabled:opacity-25"
+                >
+                    &#128260;
+                </button>
             </div>
 
             <div className="flex flex-col  gap-5 " >
